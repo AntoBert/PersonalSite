@@ -1,0 +1,55 @@
+.container {
+    height: 50px;
+    width: 100vw;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 999;
+    font-size: 12px;
+    /* background: rgba(48, 45, 45, 0.95); */
+    background: white;
+    color: black;
+    padding: 5px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid lightgrey;
+}
+
+.pagesList {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.pagesList li {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.contactBtn {
+    color: black;
+    font-weight: 600;
+    font-size: 12px;
+    width: 90px;
+    height: 30px;
+    background-color: #fafafa;
+    /* border-radius: 25px; */
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s;
+    /* ROSSO ->  box-shadow: 0px 2px 8px -2px rgb(255 16 39 / 85%); */
+    /* box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.85);
+    -webkit-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow: 0px 1px 5px 1spx rgba(0, 0, 0, 0.85); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.contactBtn:hover {
+    background-color: black;
+    color: #fafafa;
+}
