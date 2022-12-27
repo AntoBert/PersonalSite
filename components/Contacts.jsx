@@ -64,8 +64,8 @@ const Contacts = () => {
             <form method="post" className={styles.form} onSubmit={sendMail}>
                 <input className={styles.input} placeholder="Email" onChange={e => setEmail(e.target.value)} required/>
                 <input className={styles.input} placeholder="Oggetto" onChange={e => setSubject(e.target.value)} />
-                <textarea className={styles.textarea} rows={6} required onChange={e => setText(e.target.value)} />
-                <button className={styles.button}>INVIO</button>
+                <textarea placeholder="" className={styles.textarea} rows={6} required onChange={e => setText(e.target.value)} />
+                <button type="button" className={styles.button}>INVIO</button>
             </form>
         </div>
     </div>

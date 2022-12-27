@@ -25,6 +25,7 @@
 @media screen and (max-width: 708px){
     .container {
         font-size: 12px;
+        bottom: 40px;
     }
     .container:hover {
         width: 90vw;

@@ -2,6 +2,9 @@ import Head from 'next/head'
 import styles from '../styles/Info.module.css'
 import Layout from '../components/Layout'
 import Contribution from '../components/Contribution'
+import { useEffect, useState } from 'react';
+
+
 
 
 
@@ -12,6 +15,38 @@ export default function Home() {
     const webDev = "Ho iniziato ad interessarmi allo sviluppo web nel 2020 quando insieme ad alcuni amici abbiamo deciso di avviare una startup nel settore ICT. Il primo progetto a cui stiamo lavorando riguarda il settore della ristorazione e permette la prenotazione direttamente dal tavolo con l'ausilio di un chip NFC che indirizza gli utenti verso una web application. L'utilizzo di questa tecnologia garantisce una maggiore sicurezza rispetto ai metodi utilizzati attualmente senza la necessità per il cliente di effettuare una registrazione. Il progetto è in fase di completamento ed è stato realizzato seguendo il flusso MERN (Mongo - Express - React - Node).";
     const textContribution = "Additional Stock Footage Provided By Videezy!";
     const link = 'http://www.videezy.com';
+    const size = useWindowSize();
+
+    function useWindowSize() {
+        // Initialize state with undefined width/height so server and client renders match
+        const [windowSize, setWindowSize] = useState({
+          width: undefined,
+          height: undefined,
+        });
+      
+        useEffect(() => {
+          // only execute all the code below in client side
+          // Handler to call on window resize
+          function handleResize() {
+            // Set window width/height to state
+            setWindowSize({
+              width: window.innerWidth,
+              height: window.innerHeight,
+            });
+          }
+          
+          // Add event listener
+          window.addEventListener("resize", handleResize);
+           
+          // Call handler right away so state gets updated with initial window size
+          handleResize();
+          
+          // Remove event listener on cleanup
+          return () => window.removeEventListener("resize", handleResize);
+        }, []); // Empty array ensures that effect is only run on mount
+        return windowSize;
+    }
+
     
     return (
         <Layout>
@@ -39,7 +74,7 @@ export default function Home() {
                         loop
                     />
                 </div>
-                <Contribution textContrib={textContribution} link={link} />
+                {size.width >= 708 ? <Contribution textContrib={textContribution} link={link}/> : null}
             </div>
         </Layout>
     )
