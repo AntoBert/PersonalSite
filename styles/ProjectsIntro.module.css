@@ -185,7 +185,7 @@
     .title_container {
         align-items: center;
         position: absolute;
-        top: 8%;
+        top: 8vh;
         left: 24%;
     }
     .title {

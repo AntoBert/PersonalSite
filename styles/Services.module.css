@@ -118,7 +118,7 @@
     .title_container {
         align-items: center;
         position: absolute;
-        top: 10%;
+        top: 10vh;
         left: 38%;
     }
     .cards_container {
