@@ -9,7 +9,9 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --padding-left-presenceSidebar: 25vw;
-  --title-slide: grey;
+  --title-slide: rgb(64, 64, 64);
+  --line-Lg: orangered;
+  --line-Sm: rgb(120, 120, 120, 0.9);
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,

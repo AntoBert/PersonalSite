@@ -3,8 +3,8 @@
     width: 25vw;
     padding: 100px 40px 100px 40px;
     background-color: #fff;
-    -webkit-box-shadow: 9px 1px 12px 1px rgba(0,0,0,0.67); 
-    box-shadow: 9px 1px 12px 1px rgba(0,0,0,0.67);
+    /* -webkit-box-shadow: 9px 1px 12px 1px rgba(0,0,0,0.67); 
+    box-shadow: 9px 1px 12px 1px rgba(0,0,0,0.67); */
     transition: all 0.3s;
     position: fixed;
     overflow: hidden;
@@ -15,7 +15,7 @@
 
 
 .introContainer:hover {
-    width: 60vw;
+    width: 63vw;
 }
 
 .intro_title {
@@ -44,10 +44,12 @@
     padding: 8px 12px;
     border-radius: 6px;
     font-weight: 800;
+    font-size: 16px;
 }
 
 .jsBtn {
-    background-color: rgb(255, 129, 0);
+    /* background-color: rgb(255, 129, 0); */
+    background-color: orangered;
     color: #fff;
 }
 
@@ -60,8 +62,25 @@
     color: #fff;
 }
 
-.personalPic {
-    position: absolute;
-    right: 15%;
-    bottom: 15%;
+
+@media screen and (max-width: 708px){
+    .introContainer {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 709px) and (max-width: 960px){
+    .intro_title {
+        font-size: 28px;
+    }
+    .intro_para {
+        font-size: 10px;
+    }
+    .intro_skill {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+    .intro_skillCont {
+        gap: 10px;
+    }
 }

@@ -1,18 +1,34 @@
+import Link from "next/link";
 import styles from "../styles/Navbar.module.css";
 
 const Navbar = () => {
+
   return (
     <div className={styles.container}>
         <div>
             <ul className={styles.pagesList}>
-                <li>HOME</li>
-                <li>INFO</li>
-                <li>PROGETTI</li>
+                <li>
+                  <Link href={{pathname:"/", query:{ start: 'true'}}}>
+                    HOME
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/info">
+                    INFO
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/project">
+                    PROGETTI
+                  </Link>
+                </li>
             </ul>
         </div>
-        <div className={styles.contactBtn}>
-            CONTATTAMI
-        </div>
+        <Link href={{pathname:"/", query:{ scroll: 'true'}}}>
+          <div className={styles.contactBtn}>
+              CONTATTAMI
+          </div>
+        </Link>
     </div>
   )
 }

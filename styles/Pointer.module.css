@@ -1,0 +1,9 @@
+.pointerSlider_mobile {
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    background-color: rgb(247, 178, 153);
+}
+.active {
+    background-color: orangered;
+}

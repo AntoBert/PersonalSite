@@ -7,9 +7,24 @@ import IntroSidebar from '../components/IntroSidebar'
 import Header from '../components/Header'
 import ProjectsIntro from '../components/ProjectsIntro'
 import Contacts from '../components/Contacts'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 
 export default function Home() {
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.query.scroll === 'true') {
+      const sectionContacts = document.getElementById('contacts');
+      sectionContacts.scrollIntoView({ behavior: 'smooth' });
+    }
+    else if(router.query.start === 'true') {
+      const headerSection = document.getElementById('mainHeader');
+      headerSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  },[router.query]);
 
   return (
     <Layout>

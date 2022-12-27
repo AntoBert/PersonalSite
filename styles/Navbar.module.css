@@ -32,7 +32,7 @@
     color: black;
     font-weight: 600;
     font-size: 12px;
-    width: 90px;
+    width: 95px;
     height: 30px;
     background-color: #fafafa;
     /* border-radius: 25px; */
@@ -52,4 +52,19 @@
 .contactBtn:hover {
     background-color: black;
     color: #fafafa;
+}
+
+@media screen and (max-width: 708px){
+    .container {
+        padding: 5px;
+    }
+    .pagesList {
+        gap: 15px;
+    }
+    .contactBtn {
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        margin-left: 30px;
+    }
 }

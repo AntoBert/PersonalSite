@@ -1,0 +1,43 @@
+.container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 20px;
+    right: 0;
+    width: 150px;
+    height: 40px;
+    background-color: rgba(29, 29, 29, 0.871);
+    padding: 10px 20px;
+    border-radius: 8px 0 0 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 3;
+}
+
+.container:hover {
+    width: 500px;
+}
+
+@media screen and (max-width: 708px){
+    .container {
+        font-size: 12px;
+    }
+    .container:hover {
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width: 709px) and (max-width: 960px){
+    .container {
+        font-size: 12px;
+        height: 30px;
+        width: 120px;
+    }
+    .container:hover {
+        width: 400px;
+    }
+}

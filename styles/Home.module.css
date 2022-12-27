@@ -6,6 +6,11 @@
   overflow-y: scroll; 
 }
 
+@media screen and (max-width: 708px){
+  .main {
+      max-width: 100vw;
+  }
+}
 
 
 /* Enable hover only on non-touch devices */
