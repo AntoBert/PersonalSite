@@ -178,15 +178,17 @@
         max-width: 100vw;
     }
     .wrapper {
-        padding: 20px 5%;
-        justify-content: space-evenly;
+        padding: 10vh 5% 20px 5%;
+        /* justify-content: space-evenly; */
+        justify-content: start;
         position: relative;
     }
     .title_container {
         align-items: center;
-        position: absolute;
+        margin-bottom: 30px;
+        /* position: absolute;
         top: 8vh;
-        left: 24%;
+        left: 24%; */
     }
     .title {
         font-size: 22px;
