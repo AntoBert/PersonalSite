@@ -176,6 +176,7 @@
     .container {
         padding-left: 0;
         max-width: 100vw;
+        height: calc(100vh - 100px);
     }
     .wrapper {
         padding: 10vh 5% 20px 5%;
